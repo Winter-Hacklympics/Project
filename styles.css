@@ -2,10 +2,15 @@
     animation: fade-in 5s linear;
 }
 .quiz{
-    animation: move-right 5s linear;
+    animation: move-right 5s ease-in-out;
 }
 .icehockey{
-    animation: move-left 5s linear;
+    animation: move-left 5s ease-in-out;
+}
+html{
+    background: url('./images/Trianglify.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @keyframes fade-in{
@@ -18,19 +23,23 @@
 }
 @keyframes move-right{
     from{
-        transform: translateX(-50%);
+        transform: translateX(-50%) rotate(-30deg);
+        opacity: 0;
     }
     to{
-        transform: translateX(0%);
+        transform: translateX(0%) rotate(0deg);
+        opacity: 1;
     }
 }
 
 @keyframes move-left{
     from{
-        transform: translateX(50%);
+        transform: translateX(50%) rotate(30deg);
+        opacity: 0;
     }
     to{
-        transform: translateX(0);
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
     }
 }
 .typewriter h1{
